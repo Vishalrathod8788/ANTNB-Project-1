@@ -1,17 +1,25 @@
+const btnEnquiry = document.getElementById("btn-enquiry");
+const btnDownload = document.getElementById("btn-download");
+const Instagram = document.getElementById("Instagram");
+
+btnEnquiry.addEventListener("click", () => {
+  window.open(
+    "https://docs.google.com/forms/d/e/1FAIpQLSftL1iuSZ_V_GYQnkvJsF-Rjb2a-LK3RQP2KHKTAwmmprRdXA/viewform"
+  );
+});
+
+btnDownload.addEventListener("click", () => {
+  window.open(
+    "http://82.25.104.28:3041/E%20Bifold_WhatsApp%20Version%201.0_.pdf"
+  );
+});
+
+Instagram.addEventListener("click", () => {
+  window.open("https://www.instagram.com/havenbyhnc/");
+});
+
 let scrollY = 0;
 
-const btn1 = document.querySelector(".cta-primary");
-const btn2 = document.querySelector(".cta-secondary");
-
-btn1.addEventListener("onclick", () => {
-  window.location.href =
-    "https://docs.google.com/forms/d/e/1FAIpQLSftL1iuSZ_V_GYQnkvJsF-Rjb2a-LK3RQP2KHKTAwmmprRdXA/viewform";
-});
-
-btn2.addEventListener("onclick", () => {
-  window.open =
-    "http://82.25.104.28:3041/E%20Bifold_WhatsApp%20Version%201.0_.pdf";
-});
 function updateRotations() {
   const decorations = document.querySelectorAll(".svg-decoration");
 
@@ -29,6 +37,7 @@ function updateRotations() {
 
     if (decoration.classList.contains("svg-left")) {
       decoration.style.transform = `translateY(-50%) rotate(${rotation}deg)`;
+    } else {
       decoration.style.transform = `rotate(${rotation}deg)`;
     }
   });
